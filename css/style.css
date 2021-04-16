@@ -1,1 +1,120 @@
 @charset "utf-8";
+
+/* PCのレスポンシブ対応 */
+@media screen and (min-width:1200px) {
+  header {
+    width: 1100px;
+    margin: 0 auto;
+  }
+
+  .hamburger-menu-btn {
+    display: none;
+  }
+}
+
+/* TABのレスポンシブ対応 */
+@media screen and (max-width:1199px) and (min-width:768px) {
+  header {
+    width: 97%;
+    margin: 0 auto;
+  }
+
+  .hamburger-menu-btn {
+    display: none;
+  }
+}
+
+/* SPのレスポンシブ対応 */
+@media screen and (max-width:767px) {
+  header {
+    width: 97%;
+    margin: 0 auto;
+  }
+
+  .contact-btn {
+    display: none;
+  }
+
+  .hamburger-menu-btn {
+    display: block;
+  }
+}
+
+/* ヘッダーの装飾 */
+.header-nav {
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-icon {
+  color: #777;
+}
+
+.contact-btn {
+  background-color: #6ba7eb;
+  padding: 12px 14px;
+  font-size: 12px;
+  color: #ffffff;
+}
+
+/* ↓　ハンバーガーボタンの動作実装　↓*/
+.hamburger-menu-btn {
+  height: 40px;
+  width: 50px;
+  border: solid 2px rgb(190, 190, 190);
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+}
+
+.hamburger-menu-btn > input {
+  display: none;
+}
+
+.hamburger-menu-btn > span {
+  height: 2px;
+  width: 30px;
+  background-color: rgb(190, 190, 190);
+}
+
+span {
+  position: absolute;
+  transition: 0.5s;
+}
+
+.span1 {
+  top: 10px;
+  left: 10px;
+}
+.span2 {
+  top: 20px;
+  left: 10px;
+}
+.span3 {
+  top: 30px;
+  left: 10px;
+}
+
+.hamburger-menu-check:checked ~ .span1 {
+  transform: rotate(45deg)translate(7px, 7px);
+}
+
+.hamburger-menu-check:checked ~ .span2 {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+.hamburger-menu-check:checked ~ .span3 {
+  transform: rotate(-45deg)translate(7px, -7px);
+}
+/* ↑　ハンバーガーボタンの動作実装　↑*/
+
+/* ボタンの初期化 */
+button {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+}
