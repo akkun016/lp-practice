@@ -198,6 +198,7 @@ h3 {
 
 .plan-table-row.row-top > th {
   background-color: #6ba7eb;
+  overflow-wrap: break-word;
 }
 
 .plan-table-row > td {
@@ -205,6 +206,7 @@ h3 {
   line-height: 26px;
   padding: 10px;
   border-left: solid 2px #fff;
+  overflow-wrap: break-word;
 }
 
 .plan-table-row:nth-of-type(2n) {
