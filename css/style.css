@@ -220,11 +220,13 @@ h3 {
 /* snsの部分の装飾 */
 .sns {
   background-color: #e3f2fd;
-  text-align: center;
 }
 
 .sns-inner {
   padding: 200px 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 .sns-links > i {
@@ -432,9 +434,10 @@ footer {
 
   .sns-inner {
     padding: 50px 15px;
+    flex-direction: column;
   }
 
-  .sns-inner > i {
+  .sns-links > i {
     width: 100%;
     padding: 50px 0;
   }
