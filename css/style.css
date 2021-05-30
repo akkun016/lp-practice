@@ -1,47 +1,12 @@
 @charset "utf-8";
-
-/* PCのレスポンシブ対応 */
-@media screen and (min-width:1200px) {
-  header {
-    width: 1100px;
-    margin: 0 auto;
-  }
-
-  .hamburger-menu-btn {
-    display: none;
-  }
-}
-
-/* TABのレスポンシブ対応 */
-@media screen and (max-width:1199px) and (min-width:768px) {
-  header {
-    width: 97%;
-    margin: 0 auto;
-  }
-
-  .hamburger-menu-btn {
-    display: none;
-  }
-}
-
-/* SPのレスポンシブ対応 */
-@media screen and (max-width:767px) {
-  header {
-    width: 97%;
-    margin: 0 auto;
-  }
-
-  .contact-btn {
-    display: none;
-  }
-
-  .hamburger-menu-btn {
-    display: block;
-  }
-}
-
 /* ヘッダーの装飾 */
+header {
+  width: 100%;
+  background-color: #ffffff;
+}
+
 .header-nav {
+  margin: 0 auto;
   padding: 15px 0;
   display: flex;
   justify-content: space-between;
@@ -56,13 +21,18 @@
   padding: 12px 14px;
   font-size: 12px;
   color: #ffffff;
+  transition: .3s;
 }
 
-/* ↓　ハンバーガーボタンの動作実装　↓*/
+.contact-btn:hover {
+  color: #333;
+}
+
+/* ↓ ハンバーガーボタンの動作実装 ↓ */
 .hamburger-menu-btn {
   height: 40px;
   width: 50px;
-  border: solid 2px rgb(190, 190, 190);
+  border: solid 1px rgb(190, 190, 190);
   border-radius: 5px;
   position: relative;
   cursor: pointer;
@@ -80,7 +50,7 @@
 
 span {
   position: absolute;
-  transition: 0.5s;
+  transition: .5s;
 }
 
 .span1 {
@@ -98,17 +68,20 @@ span {
 
 .hamburger-menu-check:checked ~ .span1 {
   transform: rotate(45deg)translate(7px, 7px);
+  -webkit-transform: rotate(45deg)translate(7px, 7px);
 }
 
 .hamburger-menu-check:checked ~ .span2 {
   transform: translateX(10px);
+  -webkit-transform: translateX(10px);
   opacity: 0;
 }
 
 .hamburger-menu-check:checked ~ .span3 {
   transform: rotate(-45deg)translate(7px, -7px);
+  -webkit-transform: rotate(-45deg)translate(7px, -7px);
 }
-/* ↑　ハンバーガーボタンの動作実装　↑*/
+/* ↑ ハンバーガーボタンの動作実装 ↑ */
 
 /* ボタンの初期化 */
 button {
@@ -117,4 +90,355 @@ button {
   outline: none;
   padding: 0;
   appearance: none;
+}
+
+/* メインタイトル、サブタイトル部分の装飾 */
+.keyvisual {
+  width: 100%;
+  background: center / cover no-repeat url("../img/keyvisual/keyvisual.jpg");
+  text-align: center;
+}
+
+.keyvisual > h1 {
+  font-weight: 700;
+  color: #6ba7eb;
+  margin-bottom: 30px;
+}
+
+.keyvisual > h2 {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* work部分の装飾 */
+.work {
+  width: 100%;
+  background-color: #e3f2fd;
+  padding-top: 50px;
+}
+
+.work-inner {
+  margin: 0 auto;
+}
+
+.work-img {
+  width: 250px;
+  margin: 0 auto;
+  display: block;
+}
+
+.work-text-block {
+  text-align: center;
+}
+
+h3 {
+  margin-top: 20px;
+  font-size: 40px;
+  letter-spacing: 10px;
+}
+
+.work-text {
+  margin-top: 35px;
+  font-size: 15px;
+  line-height: 18px;
+  word-break: break-all;
+}
+
+/* WE ARE SKILLS部分の装飾 */
+.skills {
+  width: 100%;
+  background-color: #fff;
+}
+
+.skills-inner {
+  margin: 0 auto;
+  padding: 50px 0 70px 0;
+  text-align: center;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.skills-box {
+  padding-top: 70px;
+}
+
+.skills-image {
+  height: 300px;
+  width: 300px;
+}
+
+/* SELECT PLANの部分の装飾 */
+.plan {
+  background-color: #d0dfea;
+  padding: 30px 0 50px 0;
+}
+
+.plan-inner {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.plan-table {
+  width: 100%;
+  background-color: #e0efff;
+  margin: 50px auto 0;
+  table-layout: fixed;
+}
+
+.plan-table-row > th {
+  font-size: 16px;
+  line-height: 26px;
+  padding: 10px;
+  border-left: solid 2px #fff;
+}
+
+.plan-table-row.row-top > th {
+  background-color: #6ba7eb;
+}
+
+.plan-table-row > td {
+  font-size: 16px;
+  line-height: 26px;
+  padding: 10px;
+  border-left: solid 2px #fff;
+}
+
+.plan-table-row:nth-of-type(2n) {
+  background-color: #f9f9f9;
+}
+
+.plan-table-row > th:first-child {
+  border: none;
+}
+
+/* snsの部分の装飾 */
+.sns {
+  background-color: #e3f2fd;
+  text-align: center;
+}
+
+.sns-inner {
+  padding: 200px 0;
+}
+
+.sns-links > i {
+  width: 185px;
+  padding: 25px 0;
+  color: #8c8c8c;
+  overflow: hidden;
+  font-size: 40px;
+  transition: .5s;
+}
+
+.sns-links > i:hover {
+  color: #fff;
+}
+
+/* フッターの装飾 */
+footer {
+  background-color: #cfd8dc;
+  padding: 20px 0 25px;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer-inner > p {
+  font-size: 10px;
+  letter-spacing: 0.5px;
+}
+
+
+
+
+
+
+/* PCのレスポンシブ対応 */
+@media screen and (min-width:1200px) {
+  .header-nav {
+    width: 1100px;
+  }
+
+  .hamburger-menu-btn {
+    display: none;
+  }
+
+  .keyvisual {
+    padding: 400px 0;
+  }
+
+  .keyvisual > h1 {
+    font-size: 65px;
+  }
+  
+  .keyvisual > h2 {
+    font-size: 40px;
+  }
+
+  .work-inner {
+    width: 1100px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+  }
+
+  .skills-inner {
+    width: 1100px;
+  }
+
+  .skills-image {
+    margin: 100px 100px 0 0;
+    float: left;
+  }
+
+  .skills-image:nth-of-type(3n) {
+    margin-right: 0;
+  }
+
+  .skills-image:nth-of-type(-n+3) {
+    margin-top: 0;
+  }
+
+  .plan-inner {
+    width: 1100px;
+  }
+
+  .footer-inner {
+    width: 1100px;
+    margin: 0 auto;
+  }
+}
+
+
+
+
+/* TABのレスポンシブ対応 */
+@media screen and (max-width:1199px) and (min-width:768px) {
+  .header-nav {
+    width: 97%;
+  }
+
+  .hamburger-menu-btn {
+    display: none;
+  }
+
+  .keyvisual {
+    padding: 250px 0;
+  }
+
+  .keyvisual > h1 {
+    font-size: 65px;
+  }
+  
+  .keyvisual > h2 {
+    font-size: 40px;
+  }
+
+  .work-inner {
+    width: 97%;
+    padding-bottom: 50px;
+  }
+
+  .skills-image {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .skills-image:nth-of-type(3n) {
+    margin-bottom: 80px;
+  }
+
+  .skills-image:last-child {
+    margin-bottom: 0;
+  }
+
+  .plan-inner {
+    width: 97%;
+  }
+
+  .footer-inner {
+    width: 97%;
+    margin: 0 auto;
+  }
+}
+
+
+
+
+/* SPのレスポンシブ対応 */
+@media screen and (max-width:767px) {
+  .header-nav {
+    width: 97%;
+  }
+
+  .contact-btn {
+    display: none;
+  }
+
+  .hamburger-menu-btn {
+    display: block;
+  }
+
+  .keyvisual {
+    padding: 200px 0;
+  }
+
+  .keyvisual > h1 {
+    font-size: 40px;
+  }
+  
+  .keyvisual > h2 {
+    font-size: 30px;
+  }
+
+  .work-inner {
+    width: 97%;
+    padding-bottom: 50px;
+  }
+
+  .skills-image {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .skills-image:nth-of-type(3n) {
+    margin-bottom: 80px;
+  }
+
+  .skills-image:last-child {
+    margin-bottom: 0;
+  }
+
+  .plan-inner {
+    width: 97%;
+  }
+
+  .plan-table-row > th {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .plan-table-row > td {
+    font-size: 12px;
+    line-height: 22px;
+  }
+
+  .sns-inner {
+    padding: 50px 15px;
+  }
+
+  .sns-inner > i {
+    width: 100%;
+    padding: 50px 0;
+  }
+
+  .footer-inner {
+    width: 97%;
+    margin: 0 auto;
+  }
 }
