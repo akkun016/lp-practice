@@ -3,6 +3,7 @@
 header {
   width: 100%;
   background-color: #ffffff;
+  position: fixed;
 }
 
 .header-nav {
@@ -48,7 +49,7 @@ header {
   background-color: rgb(190, 190, 190);
 }
 
-span {
+.span-line {
   position: absolute;
   transition: .5s;
 }
