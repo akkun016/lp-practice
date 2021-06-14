@@ -29,60 +29,27 @@ header {
   color: #333;
 }
 
-/* ↓ ハンバーガーボタンの動作実装 ↓ */
 .hamburger-menu-btn {
   height: 40px;
   width: 50px;
   border: solid 1px rgb(190, 190, 190);
   border-radius: 5px;
-  position: relative;
   cursor: pointer;
-}
-
-.hamburger-menu-btn > input {
-  display: none;
-}
-
-.hamburger-menu-btn > span {
-  height: 2px;
-  width: 30px;
-  background-color: rgb(190, 190, 190);
+  background-color: transparent;
+  padding: 8px 9.5px;
 }
 
 .span-line {
-  position: absolute;
-  transition: .5s;
+  display: block;
+  height: 2px;
+  width: 30px;
+  background-color: rgb(190, 190, 190);
+  margin-bottom: 8px;
 }
 
-.span1 {
-  top: 10px;
-  left: 10px;
+.span-line:last-child {
+  margin-bottom: 0;
 }
-.span2 {
-  top: 20px;
-  left: 10px;
-}
-.span3 {
-  top: 30px;
-  left: 10px;
-}
-
-.hamburger-menu-check:checked ~ .span1 {
-  transform: rotate(45deg)translate(7px, 7px);
-  -webkit-transform: rotate(45deg)translate(7px, 7px);
-}
-
-.hamburger-menu-check:checked ~ .span2 {
-  transform: translateX(10px);
-  -webkit-transform: translateX(10px);
-  opacity: 0;
-}
-
-.hamburger-menu-check:checked ~ .span3 {
-  transform: rotate(-45deg)translate(7px, -7px);
-  -webkit-transform: rotate(-45deg)translate(7px, -7px);
-}
-/* ↑ ハンバーガーボタンの動作実装 ↑ */
 
 /* ボタンの初期化 */
 button {
@@ -275,7 +242,7 @@ footer {
   }
 
   .keyvisual {
-    padding: 400px 0;
+    padding: calc(400px + 78px) 0 400px;
   }
 
   .keyvisual > h1 {
@@ -333,7 +300,7 @@ footer {
   }
 
   .keyvisual {
-    padding: 250px 0;
+    padding: calc(250px + 78px) 0 250px;
   }
 
   .keyvisual > h1 {
@@ -390,7 +357,7 @@ footer {
   }
 
   .keyvisual {
-    padding: 200px 0;
+    padding: calc(200px + 78px) 0 200px;
   }
 
   .keyvisual > h1 {
