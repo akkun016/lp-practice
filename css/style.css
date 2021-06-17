@@ -4,6 +4,7 @@ header {
   width: 100%;
   background-color: #ffffff;
   position: fixed;
+  top: 0;
 }
 
 .header-nav {
@@ -65,6 +66,7 @@ button {
   width: 100%;
   background: center / cover no-repeat url("../img/keyvisual/keyvisual.jpg");
   text-align: center;
+  margin-top: 78px;
 }
 
 .keyvisual > h1 {
@@ -242,7 +244,7 @@ footer {
   }
 
   .keyvisual {
-    padding: calc(400px + 78px) 0 400px;
+    padding: 400px 0;
   }
 
   .keyvisual > h1 {
@@ -300,7 +302,7 @@ footer {
   }
 
   .keyvisual {
-    padding: calc(250px + 78px) 0 250px;
+    padding: 250px 0;
   }
 
   .keyvisual > h1 {
@@ -357,7 +359,7 @@ footer {
   }
 
   .keyvisual {
-    padding: calc(200px + 78px) 0 200px;
+    padding: 200px 0;
   }
 
   .keyvisual > h1 {
